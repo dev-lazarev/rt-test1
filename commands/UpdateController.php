@@ -22,16 +22,18 @@ class TestController extends Controller
     public function actionMark()
     {
 
+        echo 'start mark users'.PHP_EOL;
         $usersModel = new Users();
 
         $usersModel->write([], ['mark'=>1]);
 
-        return false;
+        echo 'end mark users'.PHP_EOL;
+        return true;
     }
 
     public function actionStart()
     {
-
+        echo 'start change password'.PHP_EOL;
         $usersModel = new Users();
 
         $users = $usersModel->find(['mark'=>1]);
@@ -43,6 +45,9 @@ class TestController extends Controller
 
             //mb send new password $password
         }
-        return false;
+
+        echo 'end change password'.PHP_EOL;
+
+        return true;
     }
 }
