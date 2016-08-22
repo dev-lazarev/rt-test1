@@ -15,7 +15,7 @@ use yii\console\Controller;
 use yii\db\Expression;
 
 
-class TestController extends Controller
+class UpdateController extends Controller
 {
 
 
